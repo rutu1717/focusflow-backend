@@ -24,7 +24,7 @@ var db *gorm.DB
 
 func initDB() {
     var err error
-    dsn := "host=localhost user=postgres password=rutu@123 dbname=focusflow port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+     dsn := "postgresql://neondb_owner:r6kP2wJuElTC@ep-lingering-meadow-a11exwte.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
     db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
     if err != nil {
         panic("failed to connect to database")
